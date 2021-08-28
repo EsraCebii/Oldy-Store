@@ -34,5 +34,20 @@ const Product = mongoose.model('product', ProductSchema);
 
 // })
 
+// Product.findByIdAndUpdate(
+//   {_id : "61297e0bd2a7994ef014f942" },
+//   {
+//     photos:[
+//       {"http://lorempixel.com/400/200"},
+//       {"http://lorempixel.com/400/200"}
+//     ]
+//   },
+//   {
+//     new : true
+//   },(err, data )=> {
+//     console.log(data)
+//   }
+// )
+
 
 export default Product;
