@@ -1,22 +1,22 @@
 import React from 'react';
-import { Flex, Box, Heading, FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
-import { useFormik } from 'formik';
-import validationSchema from './validations'; 
+import { Flex, Box, Heading, FormControl, FormLabel,  Button } from "@chakra-ui/react";
+import { Form, Formik } from 'formik';
+import validationSchema from './validations';
+import FormInput from "../../../components/FormInput"
 
 
 function Signup() {
 
-    const formik =useFormik({
-        initialValues:{
-            email: "",
-            password: "",
-            passwordCorfirm: "",
-        },
-        validationSchema,
-        onSubmit: async (values, bag)=> {
-            console.log(values);
-        },
-    })
+    // const formik =useFormik({
+    //     initialValues:{
+    //         email: "",
+    //         password: "",
+    //         passwordCorfirm: "",
+    //     },
+    //     validationSchema,        onSubmit: async (values, bag)=> {
+    //         console.log(values);
+    //     },
+    // })
 
     return (
         <div>
@@ -26,48 +26,54 @@ function Signup() {
                         <Heading>Sign Up</Heading>
                     </Box>
                     <Box my={5} textAlign="left">
-                        <form onSubmit={formik.handleSubmit}>
-                            <FormControl>
-                                <FormLabel>E-mail</FormLabel>
-                                <Input
-                                    name="email"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.email}
-                                    // isInvalid={formik.touched.email && formik.errors.email}
+                        <Formik
+                            initialValues={{
+                                email: "",
+                                password: "",
+                                passwordConfirm: "",
+                            }}
+                            validationSchema={validationSchema}
+                            onSubmit={(values) => {
+                                console.log(values)
+                            }}
 
-                                />
-                            </FormControl>
-                            <FormControl mt="4">
-                                <FormLabel>Password</FormLabel>
-                                <Input
-                                    name="password"
-                                    type="password"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.password}
-                                    // isInvalid={formik.touched.password && formik.errors.password}
-                                />
-                            </FormControl>
-                            <FormControl mt="4">
-                                <FormLabel>Password  Confirm</FormLabel>
-                                <Input
-                                    name="passwordCorfirm"
-                                    type="password"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.passwordCorfirm}
-                                    // isInvalid={formik.touched.passwordCorfirm && formik.errors.passwordCorfirm}
-                                />
-                            </FormControl>
-                            <Button mt="4" width="full" type="submit" >
-                                Sign Up
-                            </Button>
-                        </form>
+
+                        >
+                            <Form>
+                                <FormControl>
+                                    <FormLabel>E-mail</FormLabel>
+                                    <FormInput
+                                        name="email"
+                                        type="email"
+                                    
+
+                                    />
+                                </FormControl>
+                                <FormControl mt="4">
+                                    <FormLabel>Password</FormLabel>
+                                    <FormInput
+                                        name="password"
+                                        type="password"
+                                   
+                                    />
+                                </FormControl>
+                                <FormControl mt="4">
+                                    <FormLabel>Password  Confirm</FormLabel>
+                                    <FormInput
+                                        name="passwordConfirm"
+                                        type="password"
+                                   
+                                    />
+                                </FormControl>
+                                <Button mt="4" width="full" type="submit" >
+                                    Sign Up
+                                </Button>
+                            </Form>
+                        </Formik>
                     </Box>
                 </Box>
             </Flex>
-        </div>
+        </div >
     )
 }
 
