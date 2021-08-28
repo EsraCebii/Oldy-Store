@@ -12,3 +12,4 @@ export const fecthProduct = async(id) => {
    return data;
 }
 
+
