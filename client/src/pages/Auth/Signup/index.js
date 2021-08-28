@@ -1,22 +1,10 @@
 import React from 'react';
 import { Flex, Box, Heading, FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
 import { useFormik } from 'formik';
-import * as Yup from "yup";
+import validationSchema from './validations'; 
 
 
 function Signup() {
-    const validate = Yup.object({
-        name: Yup.string()
-          .min(3, "Must be 3 characters or more")
-          .required("Required"),
-        email: Yup.string().email("Email is invalid").required("Email is required"),
-        password: Yup.string()
-          .min(6, "Password must be at least 6 characters")
-          .required("Password is required"),
-        confirmPassword: Yup.string()
-          .oneOf([Yup.ref("password"), null], "Password must match")
-          .required("Confirm password is required"),
-      });
 
     const formik =useFormik({
         initialValues:{
@@ -24,7 +12,7 @@ function Signup() {
             password: "",
             passwordCorfirm: "",
         },
-        validationSchema:{validate},
+        validationSchema,
         onSubmit: async (values, bag)=> {
             console.log(values);
         },
