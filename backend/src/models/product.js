@@ -30,6 +30,8 @@ const Product = mongoose.model('product', ProductSchema);
 //   description: "Philips ",
 //   price: "1371.02",
 
+      
+
 // })
 
 

@@ -1,12 +1,12 @@
-import {Box, Image, Button, Link} from "@chakra-ui/react";
-
+import {Box, Image, Button} from "@chakra-ui/react";
+import {Link} from "react-router-dom";
 
 
 function Card({item}) {
     return (
         <Box borderWidth="1px" borderRadius="lj" overflow="hidden" p="3">
 
-            <Link to="#/">
+            <Link to={`/product/${item._id}`}>
                 <Image src="http://lorempixel.com/400/200" alt="product" loading="lazy" />
                 <Box p="6">
                     {/* <Box d="plex" alignItems="baseline" >
