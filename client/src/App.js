@@ -10,7 +10,8 @@ import Navbar from './components/Navbar';
 import Signin from './pages/Auth/Signin';
 import Signup from './pages/Auth/Signup';
 import Products from "./pages/Products";
-import ProductDetail from "./pages/ProductDetail"
+import ProductDetail from "./pages/ProductDetail";
+import Profile from './pages/Profile';
 
 
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/product/:product_id" component={ProductDetail}></Route>
             <Route path="/signin" component={Signin}></Route>
             <Route path="/signup" component={ Signup}></Route>
+            <Route path="/profile" component={ Profile}></Route>
           
           </Switch>
         </div>
