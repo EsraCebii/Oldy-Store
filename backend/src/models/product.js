@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
+// mongoose.connect('mongodb://localhost//first-test-db')
+
 const ProductSchema = new Schema({
   title: {
     type: String,
@@ -21,6 +23,14 @@ const ProductSchema = new Schema({
   },
 });
 
-const User = mongoose.model('product', ProductSchema);
+const Product = mongoose.model('product', ProductSchema);
 
-export default User;
+// Product.create({
+//   title: "Monitör",
+//   description: "Philips ",
+//   price: "1371.02",
+
+// })
+
+
+export default Product;

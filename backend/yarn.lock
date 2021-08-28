@@ -1172,15 +1172,15 @@
   "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
   "version" "1.0.4"
 
-"mongodb@3.6.5":
-  "integrity" "sha512-mQlYKw1iGbvJJejcPuyTaytq0xxlYbIoVDm2FODR+OHxyEiMR021vc32bTvamgBjCswsD54XIRwhg3yBaWqJjg=="
-  "resolved" "https://registry.npmjs.org/mongodb/-/mongodb-3.6.5.tgz"
-  "version" "3.6.5"
+"mongodb@3.6.11":
+  "integrity" "sha512-4Y4lTFHDHZZdgMaHmojtNAlqkvddX2QQBEN0K//GzxhGwlI9tZ9R0vhbjr1Decw+TF7qK0ZLjQT292XgHRRQgw=="
+  "resolved" "https://registry.npmjs.org/mongodb/-/mongodb-3.6.11.tgz"
+  "version" "3.6.11"
   dependencies:
     "bl" "^2.2.1"
     "bson" "^1.1.4"
     "denque" "^1.4.1"
-    "require_optional" "^1.0.1"
+    "optional-require" "^1.0.3"
     "safe-buffer" "^5.1.2"
   optionalDependencies:
     "saslprep" "^1.0.0"
@@ -1190,22 +1190,23 @@
   "resolved" "https://registry.npmjs.org/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz"
   "version" "1.0.2"
 
-"mongoose@*", "mongoose@^5.12.3":
-  "integrity" "sha512-frsSR9yeldaRpSUeTegXCSB0Tu5UGq8sHuHBuEV31Jk3COyxlKFQPL7UsdMhxPUCmk74FpOYSmNwxhWBEqgzQg=="
-  "resolved" "https://registry.npmjs.org/mongoose/-/mongoose-5.12.3.tgz"
-  "version" "5.12.3"
+"mongoose@*", "mongoose@^5.13.8":
+  "integrity" "sha512-z3d+qei9Dem/LxRcJi0cdGPKzQnYk71oHEsEfYm17JA/vLiAbJiGuBS2hW7vkd9afkPAqu3KsPZh2ax0c5iPQw=="
+  "resolved" "https://registry.npmjs.org/mongoose/-/mongoose-5.13.8.tgz"
+  "version" "5.13.8"
   dependencies:
     "@types/mongodb" "^3.5.27"
     "bson" "^1.1.4"
     "kareem" "2.3.2"
-    "mongodb" "3.6.5"
+    "mongodb" "3.6.11"
     "mongoose-legacy-pluralize" "1.0.2"
     "mpath" "0.8.3"
     "mquery" "3.2.5"
     "ms" "2.1.2"
+    "optional-require" "1.0.x"
     "regexp-clone" "1.0.0"
     "safe-buffer" "5.2.1"
-    "sift" "7.0.1"
+    "sift" "13.5.2"
     "sliced" "1.0.1"
 
 "mpath@0.8.3":
@@ -1351,6 +1352,11 @@
   "version" "1.4.0"
   dependencies:
     "wrappy" "1"
+
+"optional-require@^1.0.3", "optional-require@1.0.x":
+  "integrity" "sha512-RV2Zp2MY2aeYK5G+B/Sps8lW5NHAzE5QClbFP15j+PWmP+T9PxlJXBOOLoSAdgwFvS4t0aMR4vpedMkbHfh0nA=="
+  "resolved" "https://registry.npmjs.org/optional-require/-/optional-require-1.0.3.tgz"
+  "version" "1.0.3"
 
 "p-cancelable@^1.0.0":
   "integrity" "sha512-s73XxOZ4zpt1edZYZzvhqFa6uvQc1vwUa0K0BdtIZgQMAJj9IbebH+JkgKZc9h+B05PKHLOTl4ajG1BmNrVZlw=="
@@ -1555,19 +1561,6 @@
   dependencies:
     "rc" "^1.2.8"
 
-"require_optional@^1.0.1":
-  "integrity" "sha512-qhM/y57enGWHAe3v/NcwML6a3/vfESLe/sGM2dII+gEO0BpKRUkWZow/tyloNqJyN6kXSl3RyyM8Ll5D/sJP8g=="
-  "resolved" "https://registry.npmjs.org/require_optional/-/require_optional-1.0.1.tgz"
-  "version" "1.0.1"
-  dependencies:
-    "resolve-from" "^2.0.0"
-    "semver" "^5.1.0"
-
-"resolve-from@^2.0.0":
-  "integrity" "sha1-lICrIOlP+h2egKgEx+oUdhGWa1c="
-  "resolved" "https://registry.npmjs.org/resolve-from/-/resolve-from-2.0.0.tgz"
-  "version" "2.0.0"
-
 "responselike@^1.0.2":
   "integrity" "sha1-kYcg7ztjHFZCvgaPFa3lpG9Loec="
   "resolved" "https://registry.npmjs.org/responselike/-/responselike-1.0.2.tgz"
@@ -1610,11 +1603,6 @@
   "version" "3.1.1"
   dependencies:
     "semver" "^6.3.0"
-
-"semver@^5.1.0":
-  "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
-  "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
-  "version" "5.7.1"
 
 "semver@^5.6.0":
   "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
@@ -1687,10 +1675,10 @@
   "resolved" "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.1.1.tgz"
   "version" "1.1.1"
 
-"sift@7.0.1":
-  "integrity" "sha512-oqD7PMJ+uO6jV9EQCl0LrRw1OwsiPsiFQR5AR30heR+4Dl7jBBbDLnNvWiak20tzZlSE1H7RB30SX/1j/YYT7g=="
-  "resolved" "https://registry.npmjs.org/sift/-/sift-7.0.1.tgz"
-  "version" "7.0.1"
+"sift@13.5.2":
+  "integrity" "sha512-+gxdEOMA2J+AI+fVsCqeNn7Tgx3M9ZN9jdi95939l1IJ8cZsqS8sqpJyOkic2SJk+1+98Uwryt/gL6XDaV+UZA=="
+  "resolved" "https://registry.npmjs.org/sift/-/sift-13.5.2.tgz"
+  "version" "13.5.2"
 
 "signal-exit@^3.0.0", "signal-exit@^3.0.2":
   "integrity" "sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA=="
