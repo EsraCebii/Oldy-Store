@@ -10,7 +10,7 @@ function Products() {
     error,
     fetchNextPage,
     hasNextPage,
-    isFetching,
+    // isFetching,
     isFetchingNextPage,
     status,
   } = useInfiniteQuery('products', fecthProductList, {
