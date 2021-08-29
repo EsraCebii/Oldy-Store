@@ -8,7 +8,7 @@ import { useBasket } from "../../contexts/BasketContext";
 
 
 function Navbar() {
-    const { loggedIn } = useAuth();
+    const { loggedIn, user} = useAuth();
     const {items} = useBasket();
 
    
@@ -50,6 +50,13 @@ function Navbar() {
 
                                         </Button>
                                     </Link>
+                                )
+                            }
+                            {
+                                user?.role === 'admin' && (
+                                    <Link to="/admin">
+                                        <Button colorScheme="orange" variant="ghost" m="2">Admin</Button>
+                                     </Link>
                                 )
                             }
 
