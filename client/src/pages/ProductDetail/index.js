@@ -5,10 +5,13 @@ import{ fecthProduct} from "../../api";
 import {Box, Text, Button} from "@chakra-ui/react";
 import ImageGallery from 'react-image-gallery';
 
+import {useBasket} from "../../contexts/BasketContext";
+
 
 function ProductDetail() {
 
     const { product_id } = useParams();
+    const { addToBasket, items } = useBasket();
 
     const {isLoading, isError, data}= useQuery(["product", product_id], ()=> fecthProduct(product_id))
 
@@ -19,11 +22,19 @@ function ProductDetail() {
         return <div>Error.</div>
     }
 
+    const findBasketItem = items.find((item)=>
+    item._id === product_id );
+
+
+
     const images =data.photos.map((url)=>({original :url}))
     return (
         <div>
-            <Button colorScheme="orange" >
-                Add to basket
+            <Button colorScheme={findBasketItem?"blue":"orange"}
+            onClick={()=> addToBasket(data, findBasketItem)} >
+                {
+                    findBasketItem ? "Remote basket":"Add to basket"
+                }
             </Button>
 
             <Text as="h2" fontSize="2xl">
