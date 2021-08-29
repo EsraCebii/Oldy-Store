@@ -17,7 +17,7 @@ function Card({item}) {
         <Box borderWidth="1px" borderRadius="lj" overflow="hidden" p="3">
 
             <Link to={`/product/${item._id}`}>
-                <Image src="http://lorempixel.com/400/200" alt="product" loading="lazy" />
+                <Image src="http://lorempixel.com/400/200/technics" alt="product" loading="lazy" />
                 <Box p="6">
                     {/* <Box d="plex" alignItems="baseline" >
                         12/12/2021

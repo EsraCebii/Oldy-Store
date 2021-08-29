@@ -12,7 +12,10 @@ import Signup from './pages/Auth/Signup';
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Profile from './pages/Profile';
-import ProtectedRoute from "./pages/ProtectedRoute"
+import ProtectedRoute from "./pages/ProtectedRoute";
+import Basket from "./pages/Basket"
+import Error404 from './pages/Error404/İndex';
+
 
 
 
@@ -28,7 +31,9 @@ function App() {
             <Route path="/product/:product_id" component={ProductDetail}></Route>
             <Route path="/signin" component={Signin}></Route>
             <Route path="/signup" component={ Signup}></Route>
+            <Route path="/basket" component={ Basket}></Route>
             <ProtectedRoute path="/profile" component={ Profile}></ProtectedRoute>
+            <Route path="*" component={Error404}></Route>
           
           </Switch>
         </div>
