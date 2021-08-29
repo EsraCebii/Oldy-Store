@@ -1,7 +1,7 @@
 
 import * as yup from "yup";
 
-const validations = yup.object({
+const validations = yup.object().shape({
 	email: yup
 		.string()
 		.email("Gerçerli bir email girin.")

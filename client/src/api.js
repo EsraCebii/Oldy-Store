@@ -32,19 +32,21 @@ export const fecthProduct = async(id) => {
    return data;
 }
 
-export const fetchRegister = async(input) => {
-   const {data} = await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/auth/register` ,input);
+export const fetchRegister = async (input) => {
+	const { data } = await axios.post(
+		`${process.env.REACT_APP_BASE_ENDPOINT}/auth/register`,
+		input
+	);
 
-   return data
-}
+	return data;
+};
 
 export const fetchMe = async () => {
-   const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_ENDPOINT}/auth/me`
-   );
-   return data;
-}
-
+	const { data } = await axios.get(
+		`${process.env.REACT_APP_BASE_ENDPOINT}/auth/me`
+	);
+	return data;
+};
 
 
 

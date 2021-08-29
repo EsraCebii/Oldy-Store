@@ -6,21 +6,22 @@ import {Flex, Spinner} from "@chakra-ui/react"
 const AuthContext =createContext();
 
 const AuthProvider =({ children }) => {
-    const[user, setUser]=useState(null);
-    const[loggedIn,setLoggedIn]=useState(false);
-    const[loading, setLoading] =useState(true);
+    const[user, setUser] = useState(null);
+    const[loggedIn,setLoggedIn] = useState(false);
+    const[loading, setLoading] = useState(true);
 
     useEffect(()=> {
 
         (async()=> {
             try{
                 const me = await fetchMe();
+                // console.log("me", me)
 
                 setLoggedIn(true);
                 setUser(me);
                 setLoading(false)
 
-                console.log("me", me)
+                
             }catch(e) {
                 setLoading(false)
 
@@ -30,7 +31,7 @@ const AuthProvider =({ children }) => {
 
     }, []);
 
-    const login =(data) => {
+    const login = (data) => {
         setLoggedIn(true)
         setUser(data.user);
 
