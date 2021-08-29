@@ -33,9 +33,11 @@ function Signup({ history }) {
 					email: values.email,
 					password: values.password,
 				});
-                console.log("registerResponse", registerResponse);
+                
 
 				login(registerResponse);
+				history.push("/profile");
+				console.log("registerResponse", registerResponse);
 
 				
 				
