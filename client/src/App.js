@@ -12,6 +12,7 @@ import Signup from './pages/Auth/Signup';
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Profile from './pages/Profile';
+import ProtectedRoute from "./pages/ProtectedRoute"
 
 
 
@@ -27,7 +28,7 @@ function App() {
             <Route path="/product/:product_id" component={ProductDetail}></Route>
             <Route path="/signin" component={Signin}></Route>
             <Route path="/signup" component={ Signup}></Route>
-            <Route path="/profile" component={ Profile}></Route>
+            <ProtectedRoute path="/profile" component={ Profile}></ProtectedRoute>
           
           </Switch>
         </div>
