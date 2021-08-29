@@ -1,4 +1,4 @@
-import { Route, Redirect, useRouteMatch } from 'react-router-dom';
+import { Route, Redirect, } from 'react-router-dom';
 import { useAuth } from "../contexts/AuthContext"
 
 function ProtectedRoute({ component: Component, admin, ...rest }) {
