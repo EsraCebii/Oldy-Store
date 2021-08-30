@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
 	Alert,
+	AlertIcon,
 	Image,
 	Button,
 	Box,
@@ -25,13 +26,16 @@ import { postOrder } from "../../api";
 function Basket() {
 	const [address, setAddress] = useState("");
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	const [order, setOrder]=useState(false)
 	const initialRef = useRef();
+	
 
 	const { items, removeFromBasket, emptyBasket } = useBasket();
 	const total = items.reduce((acc, obj) => acc + obj.price, 0);
 
 	const handleSubmitForm = async () => {
 		const itemIds = items.map((item) => item._id);
+
 
 		const input = {
 			address,
@@ -41,16 +45,23 @@ function Basket() {
 
 		emptyBasket();
 		onClose();
-
+		setOrder(true);
 	};
 
 
 	return (
 		<Box p="5">
-			{items.length < 1 &&  (
+			{items.length < 1 && order===false && (
 				<Alert status="warning">You have not any items in your basket.</Alert>
 			)}
-
+			{
+				order===true &&(
+					<Alert status="success">
+						<AlertIcon />
+					Congratulations ! Your order has been received successfully
+				  </Alert>
+				)
+			}
 
 
 			{items.length > 0 && (
