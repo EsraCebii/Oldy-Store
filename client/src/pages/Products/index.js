@@ -36,7 +36,7 @@ function Products() {
   return (
     <div>
 
-      <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+      <Grid templateColumns="repeat(3, 1fr)" gap={6}>
 
         {  data.pages.map((group, i) => (
             <React.Fragment key={i} >

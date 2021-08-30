@@ -17,7 +17,7 @@ function Navbar() {
         <nav className={styles.nav}>
             <div className={styles.left}>
                 <div className={styles.logo}>
-                    <Link to="/">e-Commerce</Link>
+                    <Link to="/" className="baslik">e-Commerce</Link>
                 </div>
 
                 <ul className={styles.menu}>

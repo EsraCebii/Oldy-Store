@@ -14,10 +14,10 @@ function Card({item}) {
 
 
     return (
-        <Box borderWidth="1px" borderRadius="lj" overflow="hidden" p="3">
+        <Box borderWidth="1px" borderRadius="lg"  maxW="sm" overflow="hidden" p="3" >
 
             <Link to={`/product/${item._id}`}>
-                <Image src="http://lorempixel.com/400/200/technics" alt="product" loading="lazy" />
+                <Image src={item.photos[0]} alt="product" loading="lazy" maxHeight="250" />
                 <Box p="6">
                     {/* <Box d="plex" alignItems="baseline" >
                         12/12/2021
