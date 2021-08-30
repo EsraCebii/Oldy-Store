@@ -22,12 +22,12 @@ function Orders() {
             <Text fontSize="2xl" padding={5} >Orders</Text>
             
             <Table variant="simple">
-                    <TableCaption>Imperial to metric conversion factors</TableCaption>
+                    <TableCaption>Orders</TableCaption>
                     <Thead>
                         <Tr>
                             <Th>User</Th>
                             <Th>Address</Th>
-                            <Th>Items</Th>
+                            <Th>Orders</Th>
                         </Tr>
                     </Thead>
                     <Tbody>

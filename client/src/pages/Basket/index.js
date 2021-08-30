@@ -32,6 +32,9 @@ function Basket() {
 
 	const { items, removeFromBasket, emptyBasket } = useBasket();
 	const total = items.reduce((acc, obj) => acc + obj.price, 0);
+	
+		
+	
 
 	const handleSubmitForm = async () => {
 		const itemIds = items.map((item) => item._id);
@@ -68,13 +71,13 @@ function Basket() {
 				<>
 					<ul style={{ listStyleType: "decimal" }}>
 						{items.map((item) => (
-							<li key={item._id} style={{ marginBottom: 15 }}>
+							<li  key={item._id} style={{ marginBottom: 15 }}>
 								<Link to={`/product/${item._id}`}>
 									<Text fontSize="18">
 										{item.title} - {item.price} TL
 									</Text>
 									<Image
-										htmlWidth={200}
+										htmlWidth={100}
 										loading="lazy"
 										src={item.photos[0]}
 										alt="basket item"

@@ -20,7 +20,7 @@ function Navbar() {
                     <Link to="/" className={styles.baslik}>OLDY STORE</Link>
                 </div>
 
-                <ul className={styles.menu, styles.font}>
+                <ul className={ styles.font}>
                     <li>
                         <Link to="/">Products</Link>
                     </li>
