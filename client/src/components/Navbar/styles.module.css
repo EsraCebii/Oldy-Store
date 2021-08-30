@@ -7,7 +7,18 @@
   line-height: 2px;
   align-items: center;
 }
+.baslik{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
+  padding-left: 55px;
+}
+.font{
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 60px;
+  font-size: x-large;
+  font-style: italic;
 
+}
 
 .nav .left {
   display: flex;

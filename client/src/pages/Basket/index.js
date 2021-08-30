@@ -37,18 +37,21 @@ function Basket() {
 			address,
 			items: JSON.stringify(itemIds),
 		};
-
 		await postOrder(input);
 
 		emptyBasket();
 		onClose();
+
 	};
+
 
 	return (
 		<Box p="5">
-			{items.length < 1 && (
+			{items.length < 1 &&  (
 				<Alert status="warning">You have not any items in your basket.</Alert>
 			)}
+
+
 
 			{items.length > 0 && (
 				<>
@@ -105,7 +108,7 @@ function Basket() {
 							</ModalBody>
 
 							<ModalFooter>
-								<Button colorScheme="blue" mr={3} onClick={handleSubmitForm}>
+								<Button colorScheme="blue" mr={3} onClick={handleSubmitForm} >
 									Save
 								</Button>
 								<Button onClick={onClose}>Cancel</Button>

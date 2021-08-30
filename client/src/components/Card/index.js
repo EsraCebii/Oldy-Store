@@ -1,5 +1,6 @@
 import {Box, Image, Button} from "@chakra-ui/react";
 import {Link} from "react-router-dom";
+import styles from "./styles.module.css";
 
 import { useBasket } from "../../contexts/BasketContext";
 
@@ -19,19 +20,17 @@ function Card({item}) {
             <Link to={`/product/${item._id}`}>
                 <Image src={item.photos[0]} alt="product" loading="lazy" maxHeight="250" />
                 <Box p="6">
-                    {/* <Box d="plex" alignItems="baseline" >
-                        12/12/2021
-                    </Box> */}
+                 
 
-                    <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" >
+                    <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" className={styles.font1} >
                         {item.title}
                     </Box>
-                    <Box>{item.price} TL</Box>
+                    <Box className={styles.font2}>{item.price} TL</Box>
 
                 </Box>
 
             </Link>
-            <Button colorScheme={findBasketItem ? "blue" : "orange"} variant="solid" onClick={()=>addToBasket(item, findBasketItem)}>
+            <Button colorScheme={findBasketItem ? "blue" : "orange"} variant="solid" onClick={()=>addToBasket(item, findBasketItem)} className={styles.font2}>
                 {
                     findBasketItem ? "Remote from basket " : "Add to basket"
                 }

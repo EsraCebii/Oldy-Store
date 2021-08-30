@@ -17,10 +17,10 @@ function Navbar() {
         <nav className={styles.nav}>
             <div className={styles.left}>
                 <div className={styles.logo}>
-                    <Link to="/" className="baslik">e-Commerce</Link>
+                    <Link to="/" className={styles.baslik}>OLDY STORE</Link>
                 </div>
 
-                <ul className={styles.menu}>
+                <ul className={styles.menu, styles.font}>
                     <li>
                         <Link to="/">Products</Link>
                     </li>

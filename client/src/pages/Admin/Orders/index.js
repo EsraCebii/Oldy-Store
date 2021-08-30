@@ -35,10 +35,10 @@ function Orders() {
                             data.map((item) => (
                                 <Tr key={item._id}>
                                     <Td>{item.user.email}</Td>
-                                    <Td>{item.user.adress}</Td>
-                                    <Td isNumeric>{item.items.length}</Td>
-
-
+                                    <Td>{item.adress}</Td>
+                                    <Td isNumeric>{item.items.map((item,i)=>(
+                                        <Text key={i}>{item.title}</Text>
+                                    ))}</Td>
                                 </Tr>
 
                             ))
